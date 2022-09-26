@@ -18,7 +18,7 @@
     <?php
 $servername = "localhost";
 $username = "pranskeo_bigeventsim";
-$password = "BigEvent";
+$password = "pran0001BigEvent";
 $dbname = "pranskeo_bigeventsim";
 
 // Create connection
