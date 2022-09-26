@@ -17,7 +17,7 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "pranskeo_bigeventsim";
+$username = "pranskeo_pran0001";
 $password = "pran0001BigEvent";
 $dbname = "pranskeo_bigeventsim";
 
