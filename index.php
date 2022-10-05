@@ -20,7 +20,7 @@
 $servername = "localhost";
 $username = "pranskeo_pran0001";
 $password = "pran0001BigEvent";
-$dbname = "pranskeo_bigeventsim";
+$dbname = "pranskeo_homework3InnoDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
