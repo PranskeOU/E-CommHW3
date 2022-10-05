@@ -17,7 +17,7 @@
   </thead>
   <tbody>
     <?php
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "pranskeo_pran0001";
 $password = "pran0001BigEvent";
 $dbname = "pranskeo_homework3InnoDB";
