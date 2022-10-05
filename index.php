@@ -17,9 +17,9 @@
   <tbody>
     <?php
 $servername = "localhost:3306";
-$username = "pranskeo_pran0001";
-$password = "pran0001BigEvent";
-$dbname = "pranskeo_homework3InnoDB";
+$username = "pranskeo_homework3";
+$password = "iAYlcs$15a!4";
+$dbname = "pranskeo_homework3";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
