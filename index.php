@@ -29,7 +29,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT instructor_id, instructor_name, num_years from instructor join experience on instructor.instructor_id = experience.instructor_id";
+$sql = "SELECT i.instructor_id, i.instructor_name, num_years from instructor i join experience e on i.instructor_id = e.instructor_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
