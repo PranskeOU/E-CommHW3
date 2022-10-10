@@ -12,6 +12,7 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>Years of Experience</th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +29,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT instructor_id, instructor_name from instructor";
+$sql = "SELECT instructor_id, instructor_name, num_years from instructor join experience on instructor.instructor_id = experience.instructor_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -38,6 +39,7 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["instructor_id"]?></td>
     <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["num_years"]?></td>
   </tr>
 <?php
   }
