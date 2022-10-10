@@ -8,6 +8,7 @@
       <th>Number</th>
       <th>Section</th>
       <th>Instructor</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
