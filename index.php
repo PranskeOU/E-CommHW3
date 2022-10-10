@@ -39,7 +39,6 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["instructor_id"]?></td>
     <td><?=$row["instructor_name"]?></td>
-    <td><?=$row["num_years"]?></td>
   </tr>
 <?php
   }
