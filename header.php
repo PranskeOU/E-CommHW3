@@ -15,6 +15,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="instructors.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Instructors
+          </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="instructors.php">All Instructors</a></li>
           <li><hr class="dropdown-divider"></li>
