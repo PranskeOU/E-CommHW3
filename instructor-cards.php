@@ -28,9 +28,14 @@ if ($result->num_rows > 0) {
 <?php
     $section_sql = "select c.description from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=" . $row["instructor_id"];
     $section_result = $conn->query($section_sql);
+    $exp_sql = "select e.* from experience e join instructor i on i.instructor_id = e.instructor_id where i.instructor_id=" . $row["num_years"];
+    $exp_result = $conn->query($exp_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
       echo "<li>" . $section_row["description"] . "</li>";
+    }
+    while($exp_row = $exp_result->fetch_assoc()) {
+      echo "<li>" . $exp_row["num_years"] . "</li>";
     }
 ?>
       </ul></p>
