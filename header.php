@@ -15,21 +15,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="instructors.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Instructors
-          </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="instructors.php">All Instructors</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="instructor-add.php">Add Instructor</a></li>
-          <li><a class="dropdown-item" href="instructor-edit.php">Edit Instructor</a></li>
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="instructors.php">Instructors</a>
         </li>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="courses.php">Courses</a>
+        </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="sections.php">Sections</a>
+        </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="experience.php">Years of Experience</a>
         </li>
 <!--
         <li class="nav-item">
