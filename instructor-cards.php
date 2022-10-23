@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
       echo "<li>" . $section_row["description"] . "</li>";
     }
     while($exp_row = $exp_result->fetch_assoc()) {
-      echo "<li>" . $exp_row["num_years"] . "</li>";
+      echo "<li>Years of experience: " . $exp_row["num_years"] . "</li>";
     }
 ?>
       </ul></p>
