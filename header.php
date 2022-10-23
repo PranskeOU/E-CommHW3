@@ -35,6 +35,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="experience.php">Years of Experience</a>
         </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="instructor-cards.php">Instructor Cards (Related Records)</a>
+        </li>
 <!--
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
