@@ -23,6 +23,34 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+      
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  switch ($_POST['saveType']) {
+    case 'Add':
+      $sqlAdd = "insert into course (prefix, number, description) value (?,?,?)";
+      $stmtAdd = $conn->prepare($sqlAdd);
+      $stmtAdd->bind_param("s", $_POST['cPrefix']);
+      $stmtAdd->bind_param("s", $_POST['cNumber']);
+      $stmtAdd->bind_param("s", $_POST['cDescription']);
+      $stmtAdd->execute();
+      echo '<div class="alert alert-success" role="alert">New course added.</div>';
+      break;
+    case 'Edit':
+      $sqlEdit = "update course set prefix=?, number=?, description=? where course_id=?";
+      $stmtEdit = $conn->prepare($sqlEdit);
+      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['course_id']);
+      $stmtEdit->execute();
+      echo '<div class="alert alert-success" role="alert">Course edited.</div>';
+      break;
+    case 'Delete':
+      $sqlDelete = "delete from course where course_id=?";
+      $stmtDelete = $conn->prepare($sqlDelete);
+      $stmtDelete->bind_param("i", $_POST['course_id']);
+      $stmtDelete->execute();
+      echo '<div class="alert alert-success" role="alert">Course deleted.</div>';
+      break;
+  }
+}
 
 $sql = "SELECT * from course";
 $result = $conn->query($sql);
