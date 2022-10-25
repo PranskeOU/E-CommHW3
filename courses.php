@@ -62,7 +62,11 @@ if ($result->num_rows > 0) {
     <td><?=$row["prefix"]?></td>
     <td><?=$row["number"]?></td>
     <td><?=$row["description"]?></td>
-    <td>
+      <td>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editCourse">
+        Add New
+      </button>
+      </td>
       <form method="post" action="course-section.php">
         <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
         <input type="submit" value="Sections" />
@@ -120,6 +124,49 @@ $conn->close();
                   <div id="descriptionHelp" class="form-text">Enter the course description:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--- Edit Modal --->
+<div class="modal fade" id="editCourse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCourseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="editCourseLabel">Edit Course</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="CoursePrefix" class="form-label">Course Prefix</label>
+                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="cPrefix">
+                  <div id="prefixHelp" class="form-text">Enter the course prefix:</div>
+                </div>
+                <input type="hidden" name="saveType" value="Edit">
+              </form>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="CourseNumber" class="form-label">Course Number</label>
+                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="cNumber">
+                  <div id="numberHelp" class="form-text">Enter the course number:</div>
+                </div>
+                <input type="hidden" name="saveType" value="Edit">
+              </form>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="CourseDescription" class="form-label">Course Description</label>
+                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="cDescription">
+                  <div id="descriptionHelp" class="form-text">Enter the course description:</div>
+                </div>
+                <input type="hidden" name="saveType" value="Edit">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
             </div>
