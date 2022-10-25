@@ -32,16 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo '<div class="alert alert-success" role="alert">New experience added.</div>';
       break;
     case 'Edit':
-      $sqlEdit = "update experience set instructor_id=?, num_institutions=?, num_years=? where experience_id=?";
+      $sqlEdit = "update experience set instructor_id=?, num_institutions=?, num_years=? where exp_id=?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("iiii", $_POST['instructor_id'], $_POST['num_institutions'], $_POST['num_years'], $_POST['experience_id']);
+      $stmtEdit->bind_param("iiii", $_POST['instructor_id'], $_POST['num_institutions'], $_POST['num_years'], $_POST['exp_id']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Experience edited.</div>';
       break;
     case 'Delete':
-      $sqlDelete = "delete from experience where experience_id=?";
+      $sqlDelete = "delete from experience where exp_id=?";
       $stmtDelete = $conn->prepare($sqlDelete);
-      $stmtDelete->bind_param("i", $_POST['experience_id']);
+      $stmtDelete->bind_param("i", $_POST['exp_id']);
       $stmtDelete->execute();
       echo '<div class="alert alert-success" role="alert">Experience deleted.</div>';
       break;
@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
       </td>
     <td>
       <form class="btn btn-light" method="post" action="">
-         <input type="hidden" name="experience_id" value="<?=$row["experience_id"]?>" />
+         <input type="hidden" name="experience_id" value="<?=$row["exp_id"]?>" />
          <input type="hidden" name="saveType" value="Delete">
          <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
        </form>
