@@ -64,7 +64,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["description"]?></td>
       <td>
       <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editCourse">
-        Add New
+        Edit
       </button>
       </td>
       <td>
