@@ -69,6 +69,16 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
+                  <label for="CourseNumber" class="form-label">Course Number</label>
+                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="cNumber">
+                  <div id="numberHelp" class="form-text">Enter the course number:</div>
+                </div>
+                <input type="hidden" name="saveType" value="Add">
+              </form>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
                   <label for="CourseDescription" class="form-label">Course Description</label>
                   <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="cDescription">
                   <div id="descriptionHelp" class="form-text">Enter the course description:</div>
