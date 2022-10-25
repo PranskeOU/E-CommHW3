@@ -63,10 +63,11 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["description"]?></td>
       <td>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editCourse">
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editCourse">
         Add New
       </button>
       </td>
+      <td>
       <form method="post" action="course-section.php">
         <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
         <input type="submit" value="Sections" />
