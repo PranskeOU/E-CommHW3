@@ -29,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Add':
       $sqlAdd = "insert into course (prefix, number, description) value (?,?,?)";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("sis", $_POST['cPrefix'], $_POST['cNumber'], $_POST['cDescription']);
+      $stmtAdd->bind_param("sis", $_POST['Prefix'], $_POST['Number'], $_POST['Description']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New course added.</div>';
       break;
     case 'Edit':
       $sqlEdit = "update course set prefix=?, number=?, description=? where course_id=?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("sisi", $_POST['cPrefix'], $_POST['cNumber'], $_POST['cDescription'], $_POST['course_id']);
+      $stmtEdit->bind_param("sisi", $_POST['Prefix'], $_POST['Number'], $_POST['Description'], $_POST['course_id']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Course edited.</div>';
       break;
@@ -107,8 +107,8 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="CoursePrefix" class="form-label">Course Prefix</label>
-                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="cPrefix">
+                  <label for="coursePrefix" class="form-label">Course Prefix</label>
+                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="Prefix">
                   <div id="prefixHelp" class="form-text">Enter the course prefix:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
@@ -118,7 +118,7 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CourseNumber" class="form-label">Course Number</label>
-                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="cNumber">
+                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="Number">
                   <div id="numberHelp" class="form-text">Enter the course number:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
@@ -128,7 +128,7 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CourseDescription" class="form-label">Course Description</label>
-                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="cDescription">
+                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="Description">
                   <div id="descriptionHelp" class="form-text">Enter the course description:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
@@ -151,7 +151,7 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CoursePrefix" class="form-label">Course Prefix</label>
-                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="cPrefix">
+                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="Prefix">
                   <div id="prefixHelp" class="form-text">Enter the course prefix:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Edit">
@@ -161,7 +161,7 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CourseNumber" class="form-label">Course Number</label>
-                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="cNumber">
+                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="Number">
                   <div id="numberHelp" class="form-text">Enter the course number:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Edit">
@@ -171,7 +171,7 @@ $conn->close();
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CourseDescription" class="form-label">Course Description</label>
-                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="cDescription">
+                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="Description">
                   <div id="descriptionHelp" class="form-text">Enter the course description:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Edit">
