@@ -68,6 +68,13 @@ if ($result->num_rows > 0) {
       </button>
       </td>
       <td>
+        <form class="btn btn-light" method="post" action="">
+           <input type="hidden" name="course_id" value="<?=$row["course_id"]?>" />
+           <input type="hidden" name="saveType" value="Delete">
+           <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
+         </form>
+      </td>
+      <td>
       <form method="post" action="course-section.php">
         <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
         <input type="submit" value="Sections" />
