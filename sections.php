@@ -97,7 +97,7 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="scourse_id" class="form-label">Instructor ID</label>
+                  <label for="scourse_id" class="form-label">New Course ID</label>
                   <input type="text" class="form-control" id="scourse_id" aria-describedby="scourse_idHelp" name="scourse_id">
                   <div id="scourse_idHelp" class="form-text">Enter the course ID</div>
                 </div>
@@ -107,7 +107,7 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="sinstructor_id" class="form-label">Instructor ID</label>
+                  <label for="sinstructor_id" class="form-label">New Instructor ID</label>
                   <input type="text" class="form-control" id="scourse_id" aria-describedby="sinstructor_idHelp" name="sinstructor_id">
                   <div id="sinstructor_idHelp" class="form-text">Enter the instructor ID</div>
                 </div>
