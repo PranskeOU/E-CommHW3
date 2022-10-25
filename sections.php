@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
     <td>00<?=$row["section_id"]?></td>
     <td><?=$row["instructor_name"]?></td>
    <td>
-      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editCourse">
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editSection">
         Edit
       </button>
       </td>
