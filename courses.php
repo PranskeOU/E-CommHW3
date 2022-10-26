@@ -1,16 +1,4 @@
 <?php require_once("header.php"); ?>
-    <h1>Courses</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
     <?php
 $servername = "localhost:3306";
 $username = "pranskeo_homework3";
@@ -23,16 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-      
-$sql = "SELECT * from course";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-?>
-<?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
         switch ($_POST['saveType']) {
     case 'Add':
       $sqlAdd = "insert into course (prefix, number, description) values (?,?,?)";
@@ -57,6 +36,27 @@ if ($result->num_rows > 0) {
       break;
   }
 }
+?>
+    <h1>Courses</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Prefix</th>
+      <th>Number</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<?php
+      
+$sql = "SELECT * from course";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
 ?>
   <tr>
     <td><?=$row["course_id"]?></td>
