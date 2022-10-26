@@ -24,8 +24,16 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
       
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  switch ($_POST['saveType']) {
+$sql = "SELECT * from course";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+?>
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        switch ($_POST['saveType']) {
     case 'Add':
       $sqlAdd = "insert into course (prefix, number, description) values (?,?,?)";
       $stmtAdd = $conn->prepare($sqlAdd);
@@ -49,13 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       break;
   }
 }
-
-$sql = "SELECT * from course";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
 ?>
   <tr>
     <td><?=$row["course_id"]?></td>
