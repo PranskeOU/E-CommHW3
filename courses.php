@@ -68,43 +68,44 @@ if ($result->num_rows > 0) {
         Edit
       </button>
 <!--- Edit Modal --->
-      <div class="modal fade" id="editCourse<?=$row['course_id']?>">" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCourseLabel" aria-hidden="true">
+      <div class="modal fade" id="editCourse<?=$row["course_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCourse<?=$row["course_id"]?>Label">" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="editCourseLabel">Edit Course</h1>
+              <h1 class="modal-title fs-5" id="editCourse<?=$row["course_id"]?>Label">Edit Course</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="CoursePrefix" class="form-label">Course Prefix</label>
-                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="Prefix" value="<?=$row["prefix"]?>">
-                  <div id="prefixHelp" class="form-text">Enter the course prefix:</div>
+                  <label for="editCourse<?=$row["course_id"]?>Prefix" class="form-label">Course Prefix</label>
+                  <input type="text" class="form-control" id="editCourse<?=$row["course_id"]?>Prefix" aria-describedby="editCourse<?=$row["course_id"]?>Help" name="Prefix" value="<?=$row["prefix"]?>">
+                  <div id="editPrefix<?=$row["course_id"]?>Help" class="form-text">Enter the course prefix:</div>
                 </div>
+                <input type="hidden" name="Prefix" value="<?=$row["course_id"]?>">
                 <input type="hidden" name="saveType" value="Edit">
               </form>
             </div>
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="CourseNumber" class="form-label">Course Number</label>
-                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="Number" value="<?=$row["number"]?>">
-                  <div id="numberHelp" class="form-text">Enter the course number:</div>
+                  <label for="editCourse<?=$row["course_id"]?>Number" class="form-label">Course Number</label>
+                  <input type="text" class="form-control" id="editCourse<?=$row["course_id"]?>Number" aria-describedby="editCourse<?=$row["course_id"]?>Help" name="Number" value="<?=$row["number"]?>">
+                  <div id="editNumber<?=$row["course_id"]?>Help" class="form-text">Enter the course number:</div>
                 </div>
+                <input type="hidden" name="Number" value="<?=$row["course_id"]?>">
                 <input type="hidden" name="saveType" value="Edit">
               </form>
             </div>
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="CourseDescription" class="form-label">Course Description</label>
-                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="Description" value="<?=$row["description"]?>">
-                  <div id="descriptionHelp" class="form-text">Enter the course description:</div>
+                  <label for="editCourse<?=$row["course_id"]?>Description" class="form-label">Course Description</label>
+                  <input type="text" class="form-control" id="editCourse<?=$row["course_id"]?>Description" aria-describedby="editCourse<?=$row["course_id"]?>Help" name="Description" value="<?=$row["description"]?>">
+                  <div id="editDescription<?=$row["course_id"]?>Help" class="form-text">Enter the course description:</div>
                 </div>
-                <input type="hidden" name="iid" value="<?=$row['course_id']?>">
+                <input type="hidden" name="Description" value="<?=$row["course_id"]?>">
                 <input type="hidden" name="saveType" value="Edit">
-                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
             </div>
           </div>
