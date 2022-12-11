@@ -87,6 +87,7 @@ if ($result->num_rows > 0) {
                 <input type="text" class="form-control" id="editCourse<?=$row["course_id"]?>Number" aria-describedby="editCourse<?=$row["course_id"]?>Help" name="Number" value="<?=$row["number"]?>">
                   <div id="editNumber<?=$row["course_id"]?>Help" class="form-text">Enter the course number:</div>
                   </div>
+                <input type="hidden" name="Description" value="<?=$row["course_id"]?>">
                 <label for="editCourse<?=$row["course_id"]?>Description" class="form-label">Course Description</label>
                 <input type="text" class="form-control" id="editCourse<?=$row["course_id"]?>Description" aria-describedby="editCourse<?=$row["course_id"]?>Help" name="Description" value="<?=$row["description"]?>">
                   <div id="editDescription<?=$row["course_id"]?>Help" class="form-text">Enter the course description:</div>
