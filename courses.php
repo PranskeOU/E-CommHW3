@@ -64,11 +64,11 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["description"]?></td>
       <td>
-      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editCourse">
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editCourse<?=$row['course_id']?>">
         Edit
       </button>
 <!--- Edit Modal --->
-      <div class="modal fade" id="editCourse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCourseLabel" aria-hidden="true">
+      <div class="modal fade" id="editCourse<?=$row['course_id']?>">" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCourseLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -102,6 +102,7 @@ if ($result->num_rows > 0) {
                   <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="Description" value="<?=$row["description"]?>">
                   <div id="descriptionHelp" class="form-text">Enter the course description:</div>
                 </div>
+                <input type="hidden" name="iid" value="<?=$row['course_id']?>">
                 <input type="hidden" name="saveType" value="Edit">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
