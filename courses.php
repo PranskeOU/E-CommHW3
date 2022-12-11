@@ -93,7 +93,7 @@ if ($result->num_rows > 0) {
                   </div>
                 <input type="hidden" name="Description" value="<?=$row["course_id"]?>">
                 <input type="hidden" name="saveType" value="Edit">
-                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+                <input type="submit" class="btn btn-primary" value="Submit">
               </form>
             </div>
           </div>
