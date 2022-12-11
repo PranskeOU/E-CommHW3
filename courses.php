@@ -82,7 +82,7 @@ if ($result->num_rows > 0) {
                   <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="Prefix" value="<?=$row["prefix"]?>">
                   <div id="prefixHelp" class="form-text">Enter the course prefix:</div>
                 </div>
-                <input type="submit" name="saveType" value="Edit">
+                <input type="hidden" name="saveType" value="Edit">
               </form>
             </div>
             <div class="modal-body">
@@ -92,7 +92,7 @@ if ($result->num_rows > 0) {
                   <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="Number" value="<?=$row["number"]?>">
                   <div id="numberHelp" class="form-text">Enter the course number:</div>
                 </div>
-                <input type="submit" name="saveType" value="Edit">
+                <input type="hidden" name="saveType" value="Edit">
               </form>
             </div>
             <div class="modal-body">
