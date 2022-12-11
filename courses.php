@@ -83,7 +83,6 @@ if ($result->num_rows > 0) {
                   <div id="editPrefix<?=$row["course_id"]?>Help" class="form-text">Enter the course prefix:</div>
                 </div>
                 <input type="hidden" name="Prefix" value="<?=$row["course_id"]?>">
-                <input type="hidden" name="saveType" value="Edit">
               </form>
             </div>
             <div class="modal-body">
@@ -94,7 +93,6 @@ if ($result->num_rows > 0) {
                   <div id="editNumber<?=$row["course_id"]?>Help" class="form-text">Enter the course number:</div>
                 </div>
                 <input type="hidden" name="Number" value="<?=$row["course_id"]?>">
-                <input type="hidden" name="saveType" value="Edit">
               </form>
             </div>
             <div class="modal-body">
@@ -106,7 +104,7 @@ if ($result->num_rows > 0) {
                 </div>
                 <input type="hidden" name="Description" value="<?=$row["course_id"]?>">
                 <input type="hidden" name="saveType" value="Edit">
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <button type="submit" class="btn btn-primary" value="Submit">
               </form>
             </div>
           </div>
