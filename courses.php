@@ -124,6 +124,13 @@ if ($result->num_rows > 0) {
         <input type="submit" value="Sections" />
       </form>
     </td>
+    <?php
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
   </tr>
   </tbody>
     </table>
