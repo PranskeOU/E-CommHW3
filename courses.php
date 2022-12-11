@@ -151,7 +151,7 @@ if ($result->num_rows > 0) {
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CoursePrefix" class="form-label">Course Prefix</label>
-                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="Prefix" placeholder="<?=$row["prefix"]?>">
+                  <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="Prefix" value="<?=$row["prefix"]?>">
                   <div id="prefixHelp" class="form-text">Enter the course prefix:</div>
                 </div>
                 <input type="submit" name="saveType" value="Edit">
@@ -161,7 +161,7 @@ if ($result->num_rows > 0) {
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CourseNumber" class="form-label">Course Number</label>
-                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="Number" placeholder="<?=$row["number"]?>">
+                  <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="Number" value="<?=$row["number"]?>">
                   <div id="numberHelp" class="form-text">Enter the course number:</div>
                 </div>
                 <input type="submit" name="saveType" value="Edit">
@@ -171,7 +171,7 @@ if ($result->num_rows > 0) {
               <form method="post" action="">
                 <div class="mb-3">
                   <label for="CourseDescription" class="form-label">Course Description</label>
-                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="Description" placeholder="<?=$row["description"]?>">
+                  <input type="text" class="form-control" id="courseDescription" aria-describedby="descriptionHelp" name="Description" value="<?=$row["description"]?>">
                   <div id="descriptionHelp" class="form-text">Enter the course description:</div>
                 </div>
                 <input type="hidden" name="saveType" value="Edit">
@@ -182,7 +182,6 @@ if ($result->num_rows > 0) {
         </div>
       </div>
     </div>
-    <?$conn->close();?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
