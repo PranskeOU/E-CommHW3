@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
     <td>00<?=$row["section_id"]?></td>
     <td><?=$row["instructor_name"]?></td>
    <td>
-      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editSection">
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editSection<?=$row['section_id']?>">
         Edit
       </button>
       <div class="modal fade" id="editSection<?=$row["section_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editSection<?=$row["section_id"]?>Label">" aria-hidden="true">
