@@ -111,7 +111,47 @@ $conn->close();
 ?>
   </tbody>
     </table>
+    <br />
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSection">
+        Add New
+      </button>
 
+      <!-- Modal -->
+      <div class="modal fade" id="addSection" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addSectionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="addSectionLabel">Add Section</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="sectioncourse_id" class="form-label">Course ID</label>
+                  <input type="text" class="form-control" id="sectioncourse_id" aria-describedby="course_idHelp" name="course_id">
+                  <div id="course_idHelp" class="form-text">Enter the Course ID</div>
+                </div>
+                <input type="submit" name="saveType" value="Add">
+              </form>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="Sectioninstructor_id" class="form-label">Instructor ID</label>
+                  <input type="text" class="form-control" id="sectioninstructor_id" aria-describedby="instructor_idHelp" name="instructor_id">
+                  <div id="instructor_idHelp" class="form-text">Enter the Instructor ID:</div>
+                </div>
+                <input type="submit" name="saveType" value="Add">
+              </form>
+            </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
