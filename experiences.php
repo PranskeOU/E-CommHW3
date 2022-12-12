@@ -92,7 +92,7 @@ if ($result->num_rows > 0) {
       </td>
     <td>
       <form class="btn btn-light" method="post" action="">
-         <input type="hidden" name="experience_id" value="<?=$row["exp_id"]?>" />
+         <input type="hidden" name="exp_id" value="<?=$row["exp_id"]?>" />
          <input type="hidden" name="saveType" value="Delete">
          <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
        </form>
