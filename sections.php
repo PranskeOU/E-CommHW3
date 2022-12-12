@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-$sql = "select section_id, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id";
+$sql = "select section_id, i.instructor_name, c.prefix, c.number, c.course_id, i.instructor_id from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
