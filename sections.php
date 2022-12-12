@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
       <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editSection<?=$row['section_id']?>">
         Edit
       </button>
-      <div class="modal fade" id="editSection<?=$row["section_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editSection<?=$row["section_id"]?>Label">" aria-hidden="true">
+      <div class="modal fade" id="editSection<?=$row["section_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editSection<?=$row["section_id"]?>Label" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -140,7 +140,7 @@ $conn->close();
                 <div class="mb-3">
                   <label for="Sectioninstructor_id" class="form-label">Instructor ID</label>
                   <input type="text" class="form-control" id="sectioninstructor_id" aria-describedby="instructor_idHelp" name="instructor_id">
-                  <div id="instructor_idHelp" class="form-text">Enter the Instructor ID:</div>
+                  <div id="instructor_idHelp" class="form-text">Enter the Instructor ID</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
               </form>
