@@ -64,7 +64,7 @@ if ($result->num_rows > 0) {
         Edit
       </button>
 <!--- Edit Modal --->
-      <div class="modal fade" id="editCourse<?=$row["exp_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editExp<?=$row["exp_id"]?>Label" aria-hidden="true">
+      <div class="modal fade" id="editExp<?=$row["exp_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editExp<?=$row["exp_id"]?>Label" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
