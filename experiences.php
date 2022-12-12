@@ -113,7 +113,7 @@ $conn->close();
         Add New
       </button>
 
-      <!-- Modal -->
+      <!-- Add Modal -->
       <div class="modal fade" id="addExp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExpLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -124,38 +124,21 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="expinstructor_id" class="form-label">Instructor ID</label>
-                  <input type="text" class="form-control" id="expinstructor_id" aria-describedby="instructor_idHelp" name="instructor_id">
-                  <div id="instructor_idHelp" class="form-text">Enter the Instructor ID:</div>
-                </div>
+                <label for="addExpinstructor_id" class="form-label">Instructor ID</label>
+                <input type="text" class="form-control" id="addExpinstructor_id" aria-describedby="addExpHelp" name="instructor_id">
+                <label for="addExpnum_institutions" class="form-label">Number of institutions worked at:</label>
+                <input type="text" class="form-control" id="addExpnum_institutions" aria-describedby="addExpHelp" name="num_institutions">
+                <label for="addExpnum_years" class="form-label">Number of total years worked</label>
+                <input type="text" class="form-control" id="addExpnum_years" aria-describedby="addExpHelp" name="num_years">
+                <input type="hidden" name="exp_id" value="">
                 <input type="hidden" name="saveType" value="Add">
-              </form>
-            </div>
-            <div class="modal-body">
-              <form method="post" action="">
-                <div class="mb-3">
-                  <label for="expnum_institutions" class="form-label">Number of institutions worked at</label>
-                  <input type="text" class="form-control" id="expnum_institutions" aria-describedby="num_institutionsHelp" name="num_institutions">
-                  <div id="num_institutionsHelp" class="form-text">Enter the number of institutions</div>
-                </div>
-                <input type="hidden" name="saveType" value="Add">
-              </form>
-            </div>
-            <div class="modal-body">
-              <form method="post" action="">
-                <div class="mb-3">
-                  <label for="expnum_years" class="form-label">Number of total years worked</label>
-                  <input type="text" class="form-control" id="expnum_years" aria-describedby="num_yearsHelp" name="num_years">
-                  <div id="num_yearsHelp" class="form-text">Enter the number of years</div>
-                </div>
-                <input type="hidden" name="saveType" value="Add">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <br></br>
+                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>

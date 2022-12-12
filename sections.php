@@ -117,7 +117,7 @@ $conn->close();
         Add New
       </button>
 
-      <!-- Modal -->
+      <!-- Add Modal -->
       <div class="modal fade" id="addSection" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addSectionLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -128,30 +128,19 @@ $conn->close();
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="sectioncourse_id" class="form-label">Course ID</label>
-                  <input type="text" class="form-control" id="sectioncourse_id" aria-describedby="course_idHelp" name="course_id">
-                  <div id="course_idHelp" class="form-text">Enter the Course ID</div>
-                </div>
+                <label for="addSectioncourse_id" class="form-label">New Course ID</label>
+                <input type="text" class="form-control" id="addSectioncourse_id" aria-describedby="addSectionHelp" name="course_id">
+                <label for="addSectioninstructor_id" class="form-label">New Instructor ID</label>
+                <input type="text" class="form-control" id="addSectioninstructor_id" aria-describedby="addSectionHelp" name="instructor_id">
+                <input type="hidden" name="section_id" value="">
                 <input type="hidden" name="saveType" value="Add">
-              </form>
-            </div>
-            <div class="modal-body">
-              <form method="post" action="">
-                <div class="mb-3">
-                  <label for="Sectioninstructor_id" class="form-label">Instructor ID</label>
-                  <input type="text" class="form-control" id="sectioninstructor_id" aria-describedby="instructor_idHelp" name="instructor_id">
-                  <div id="instructor_idHelp" class="form-text">Enter the Instructor ID</div>
-                </div>
-                <input type="hidden" name="saveType" value="Add">
-              </form>
-            </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <br></br>
+                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
