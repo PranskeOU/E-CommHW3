@@ -138,7 +138,7 @@ $conn->close();
                   <input type="text" class="form-control" id="coursePrefix" aria-describedby="prefixHelp" name="Prefix">
                   <div id="prefixHelp" class="form-text">Enter the course prefix:</div>
                 </div>
-                <input type="submit" name="saveType" value="Add">
+                <input type="hidden" name="saveType" value="Add">
               </form>
             </div>
             <div class="modal-body">
@@ -148,7 +148,7 @@ $conn->close();
                   <input type="text" class="form-control" id="courseNumber" aria-describedby="numberHelp" name="Number">
                   <div id="numberHelp" class="form-text">Enter the course number:</div>
                 </div>
-                <input type="submit" name="saveType" value="Add">
+                <input type="hidden" name="saveType" value="Add">
               </form>
             </div>
             <div class="modal-body">

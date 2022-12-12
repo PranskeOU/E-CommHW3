@@ -132,7 +132,7 @@ $conn->close();
                   <input type="text" class="form-control" id="sectioncourse_id" aria-describedby="course_idHelp" name="course_id">
                   <div id="course_idHelp" class="form-text">Enter the Course ID</div>
                 </div>
-                <input type="submit" name="saveType" value="Add">
+                <input type="hidden" name="saveType" value="Add">
               </form>
             </div>
             <div class="modal-body">
@@ -142,7 +142,7 @@ $conn->close();
                   <input type="text" class="form-control" id="sectioninstructor_id" aria-describedby="instructor_idHelp" name="instructor_id">
                   <div id="instructor_idHelp" class="form-text">Enter the Instructor ID:</div>
                 </div>
-                <input type="submit" name="saveType" value="Add">
+                <input type="hidden" name="saveType" value="Add">
               </form>
             </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
