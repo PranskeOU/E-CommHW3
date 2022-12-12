@@ -80,9 +80,9 @@ if ($result->num_rows > 0) {
               <form method="post" action="">
                 <div class="mb-3">
                 <label for="editSection<?=$row["section_id"]?>course_id" class="form-label">New Course ID</label>
-                <input type="text" class="form-control" id="editSection<?=$row["section_id"]?>course_id" aria-describedby="editSection<?=$row["section_id"]?>Help" name="Prefix" value="<?=$row["prefix"]?>">
+                <input type="text" class="form-control" id="editSection<?=$row["section_id"]?>course_id" aria-describedby="editSection<?=$row["section_id"]?>Help" name="course_id" value="<?=$row["course_id"]?>">
                 <label for="editSection<?=$row["section_id"]?>instructor_id" class="form-label">New Instructor ID</label>
-                <input type="text" class="form-control" id="editSection<?=$row["section_id"]?>instructor_id" aria-describedby="editSection<?=$row["section_id"]?>Help" name="Number" value="<?=$row["number"]?>">
+                <input type="text" class="form-control" id="editSection<?=$row["section_id"]?>instructor_id" aria-describedby="editSection<?=$row["section_id"]?>Help" name="instructor_id" value="<?=$row["instructor_id"]?>">
                 <input type="hidden" name="section_id" value="<?=$row["section_id"]?>">
                 <input type="hidden" name="saveType" value="Edit">
                 <br></br>
