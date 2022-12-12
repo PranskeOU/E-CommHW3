@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       break;
   }
 }
-$sql = "SELECT *,i.instructor_id from experience e join instructor i on e.instructor_id=i.instructor_id";
+$sql = "SELECT e.*,i.instructor_id, i.instructor_name from experience e join instructor i on e.instructor_id=i.instructor_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
