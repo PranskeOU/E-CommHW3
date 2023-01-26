@@ -33,6 +33,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["instructor_name"]?></td>
     <td><?=$row["num_years"]?></td>
   </tr>
+<iframe title="VolDash" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=5f3d094e-a48d-4799-9eec-a75f4a710f32&autoAuth=true&ctid=9c7de09d-9034-44c1-b462-c464fece204a" frameborder="0" allowFullScreen="true"></iframe>
 <?php
   }
 } else {
